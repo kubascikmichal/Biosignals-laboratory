@@ -1,0 +1,11 @@
+{
+  "streams": [
+    {
+      "name": "Stream2",
+      "type": "ECG",
+      "sampling_frequency": 512,
+      "channels": ["Lead1", "Lead2"],
+      "script_path": "scripts/stream2_script.py"
+    }
+  ]
+}
