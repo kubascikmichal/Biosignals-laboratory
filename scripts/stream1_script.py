@@ -3,7 +3,7 @@ import time
 def stream1():
     print("Starting Stream1 (EEG)...")
     while True:
-        # Simular la transmisión de datos EEG
+        # Simulate the transmision of EEG data
         print("Streaming EEG data...")
         time.sleep(1)
 
