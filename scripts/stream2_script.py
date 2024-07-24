@@ -3,7 +3,7 @@ import time
 def stream2():
     print("Starting Stream2 (ECG)...")
     while True:
-        # Simular la transmisión de datos ECG
+        # # Simulate the transmision of ECG data
         print("Streaming ECG data...")
         time.sleep(1)
 
