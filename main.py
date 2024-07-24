@@ -3,7 +3,11 @@ import json
 import subprocess
 import time
 
-CONFIG_DIR = 'configs'  # direction to the folder containing JSON files
+# base pathway of the proyect
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# config folder
+CONFIG_DIR = os.path.join(BASE_DIR, 'configs')es
 
 def load_config_files(config_dir):
     """Load all the JSON config files from a folder"""
@@ -26,7 +30,7 @@ def main():
     for config_file in config_files:
         config = parse_config(config_file)
         for stream in config['streams']:
-            script_path = stream['script_path']
+            script_path = os.path.join(BASE_DIR, stream['script_path'])
             process = start_stream(script_path)
             processes.append((stream['name'], process))
             print(f"Started {stream['name']} with PID {process.pid}")
