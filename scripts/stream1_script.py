@@ -1,48 +1,38 @@
-import csv
-import time
-from pylsl import StreamInlet, resolve_stream
+import asyncio
+from bleak import BleakClient, BleakScanner
+from pylsl import StreamInfo, StreamOutlet
 
-# Configuration
-OUTPUT_FILE = 'stream1_data_log.csv'  # The name of the file to store the data
-STREAM_NAME = 'Stream1'  # Replace with the name of your LSL stream
+# BLE device MAC address (adjust as necessary)
+DEVICE_MAC_ADDRESS = "fb:36:a9:c9:22:69"  # Replace with your device's MAC address
 
-def find_stream(name):
-    """Finds an LSL stream with the given name."""
-    print(f"Searching for stream: {name}")
-    # Resolving all available streams
-    streams = resolve_stream('name', name)
-    if not streams:
-        raise RuntimeError(f"No streams found with name: {name}")
-    return streams[0]
+# UUIDs for the service and characteristic (adjust if necessary)
+SERVICE_UUID = "0000181a-0000-1000-8000-00805f9b34fb"
+CHARACTERISTIC_UUID = "00002a56-0000-1000-8000-00805f9b34fb"
 
-def main():
-    # Find the data source
-    stream = find_stream(STREAM_NAME)
-    inlet = StreamInlet(stream)
-    
-    # Open the CSV file for writing
-    with open(OUTPUT_FILE, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        print(f"Starting data logging for {STREAM_NAME}...")
-        
-        # Write the header of the CSV
-        writer.writerow(['Timestamp'] + [f'Channel_{i}' for i in range(stream.channel_count())])
-        
-        try:
-            while True:
-                # Get data from the stream
-                timestamp, data = inlet.pull_sample()
-                
-                # Write data to the CSV file
-                writer.writerow([timestamp] + data)
-                
-                # Print to console (optional)
-                print(f"Timestamp: {timestamp}, Data: {data}")
-                
-                # Wait a bit before the next read
-                time.sleep(0.1)
-        except KeyboardInterrupt:
-            print("Data logging stopped.")
+# LSL configuration
+info = StreamInfo('SensorStream', 'EEG', 1, 100, 'float32', 'myuidw43536')
+outlet = StreamOutlet(info)
 
-if __name__ == "__main__":
-    main()
+def notification_handler(sender, data):
+    """BLE notification handler function."""
+    sensor_value = int.from_bytes(data, byteorder='little')
+    print(f"Sensor value: {sensor_value}")
+    outlet.push_sample([sensor_value])
+
+async def run():
+    device = await BleakScanner.find_device_by_address(DEVICE_MAC_ADDRESS)
+    if not device:
+        print("Device not found!")
+        return
+
+    async with BleakClient(device) as client:
+        print("Connected to BLE device")
+        await client.start_notify(CHARACTERISTIC_UUID, notification_handler)
+
+        # Keep the program running to receive data
+        while True:
+            await asyncio.sleep(1)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(run())
+
