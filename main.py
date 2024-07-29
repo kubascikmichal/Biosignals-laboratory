@@ -9,8 +9,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Configuration folder
 CONFIG_DIR = os.path.join(BASE_DIR, 'configs')
 
-# Log folder (assuming it already exists)
+# Log folder
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
+
+# Create log directory if it doesn't exist
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
 
 def load_config_files(config_dir):
     """Loads all JSON configuration files from a folder."""
@@ -63,4 +67,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
