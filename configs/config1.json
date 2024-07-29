@@ -2,9 +2,11 @@
   "streams": [
     {
       "name": "Stream1",
-      "type": "EEG",
-      "sampling_frequency": 256,
+      "type": "EMG",
+      "sampling_frequency": 100,
       "channels": ["F3", "F4", "C3", "C4"],
+      "data_type": "float32",
+      "unique_id": "myuidw43536",
       "script_path": "scripts/stream1_script.py"
     }
   ]
