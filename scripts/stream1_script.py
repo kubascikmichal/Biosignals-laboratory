@@ -9,7 +9,7 @@ DEVICE_MAC_ADDRESS = "fb:36:a9:c9:22:69"  # Replace with your device's MAC addre
 SERVICE_UUID = "0000181a-0000-1000-8000-00805f9b34fb"
 CHARACTERISTIC_UUID = "00002a56-0000-1000-8000-00805f9b34fb"
 
-# LSL configuration
+# LSL configuration - needs to be loaded from config file
 info = StreamInfo('SensorStream', 'EEG', 1, 100, 'float32', 'myuidw43536')
 outlet = StreamOutlet(info)
 
