@@ -1,4 +1,5 @@
 import asyncio
+import sys
 from bleak import BleakClient, BleakScanner
 from pylsl import StreamInfo, StreamOutlet
 
@@ -9,8 +10,20 @@ DEVICE_MAC_ADDRESS = "fb:36:a9:c9:22:69"  # Replace with your device's MAC addre
 SERVICE_UUID = "0000181a-0000-1000-8000-00805f9b34fb"
 CHARACTERISTIC_UUID = "00002a56-0000-1000-8000-00805f9b34fb"
 
-# LSL configuration - needs to be loaded from config file
-info = StreamInfo('SensorStream', 'EEG', 1, 100, 'float32', 'myuidw43536')
+# Get parameters from command line arguments
+if len(sys.argv) < 6:
+    print("Usage: python script.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>")
+    sys.exit(1)
+
+stream_name = sys.argv[1]
+stream_type = sys.argv[2]
+sampling_frequency = int(sys.argv[3])
+data_type = sys.argv[4]
+unique_id = sys.argv[5]
+channels = sys.argv[6].split(',')
+
+# LSL configuration - use the parameters from command line arguments
+info = StreamInfo(stream_name, stream_type, len(channels), sampling_frequency, data_type, unique_id)
 outlet = StreamOutlet(info)
 
 def notification_handler(sender, data):
@@ -35,4 +48,3 @@ async def run():
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(run())
-
