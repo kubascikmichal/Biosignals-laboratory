@@ -21,7 +21,9 @@ def parse_config(file_path):
 
 def start_stream(script_path):
     """Starts a script and returns the process."""
-    return subprocess.Popen(['python', script_path])
+    log_file = os.path.join(BASE_DIR, f'{stream_name}.log')
+    return subprocess.Popen(['python', script_path, stream_name, stream_type], stdout=open(log_file, 'a'), stderr=subprocess.STDOUT)
+
 
 def main():
     config_files = load_config_files(CONFIG_DIR)
