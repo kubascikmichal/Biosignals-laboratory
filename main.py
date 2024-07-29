@@ -9,6 +9,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Configuration folder
 CONFIG_DIR = os.path.join(BASE_DIR, 'configs')
 
+# Log folder (assuming it already exists)
+LOG_DIR = os.path.join(BASE_DIR, 'logs')
+
 def load_config_files(config_dir):
     """Loads all JSON configuration files from a folder."""
     config_files = [f for f in os.listdir(config_dir) if f.endswith('.json')]
@@ -19,11 +22,10 @@ def parse_config(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-def start_stream(script_path):
+def start_stream(script_path, stream_name, stream_type):
     """Starts a script and returns the process."""
-    log_file = os.path.join(BASE_DIR, f'{stream_name}.log')
+    log_file = os.path.join(LOG_DIR, f'{stream_name}.log')
     return subprocess.Popen(['python', script_path, stream_name, stream_type], stdout=open(log_file, 'a'), stderr=subprocess.STDOUT)
-
 
 def main():
     config_files = load_config_files(CONFIG_DIR)
@@ -38,7 +40,7 @@ def main():
             if not os.path.isfile(script_path):
                 print(f"Error: The file {script_path} does not exist.")
                 continue
-            process = start_stream(script_path)
+            process = start_stream(script_path, stream['name'], stream['type'])
             processes.append((stream['name'], process, script_path))
             print(f"Started {stream['name']} with PID {process.pid}")
     
@@ -49,7 +51,7 @@ def main():
                 if process.poll() is not None:  # Process has ended
                     print(f"Process {name} (PID {process.pid}) ended.")
                     # Restart the process if necessary
-                    process = start_stream(script_path)
+                    process = start_stream(script_path, name, 'type')  # Provide appropriate type here if needed
                     processes[i] = (name, process, script_path)
                     print(f"Restarted {name} with PID {process.pid}")
             time.sleep(5)  # Wait before checking again
@@ -61,3 +63,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
