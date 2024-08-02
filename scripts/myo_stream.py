@@ -35,7 +35,7 @@ def load_data(results: list, path: str) -> int:
     return len(results)
 
 thumb_results=[]
-len = load_data(thumb_results, "..\\data\\myo_stream\\raw_emg_data_unprocessed\\thumb_motion_raw.csv")
+len = load_data(thumb_results, "../data/myo_stream/raw_emg_data_unprocessed/thumb_motion_raw.csv")
 print("Loaded thumb movement data with len %d" % len)
 index_results=[]
 len = load_data(index_results, "..\\data\\myo_stream\\raw_emg_data_unprocessed\\index_finger_motion_raw.csv")
