@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "Electromyography(EMG) Dataset",
+      "type": "EMG",
+      "sampling_frequency": 200,
+      "channels": ["E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7"],
+      "data_type": "float32",
+      "unique_id": "MYO",
+      "script_path": "scripts/myo_stream.py"
+    }
+  ]
+}

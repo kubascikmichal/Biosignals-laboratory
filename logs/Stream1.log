@@ -1,0 +1,2 @@
+Usage: python script.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python script.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>

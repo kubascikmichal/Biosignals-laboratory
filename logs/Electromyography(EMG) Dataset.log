@@ -1,0 +1,2 @@
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>

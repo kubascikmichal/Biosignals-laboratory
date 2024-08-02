@@ -1,0 +1,35 @@
+2024-08-02 07:41:46.961 (   0.017s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{3A6826F6-4F5F-4160-9F66-0D9E9175ACEE}' (status: 2, multicast: 1
+2024-08-02 07:41:46.961 (   0.018s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{BA05B000-71C1-40F6-AB61-2A67BD7D13DA}' (status: 1, multicast: 1
+2024-08-02 07:41:46.961 (   0.018s) [        DE270071]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 21
+2024-08-02 07:41:46.961 (   0.018s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{F72EFBC3-BA17-4898-9346-4C2EDC1F0C9C}' (status: 1, multicast: 1
+2024-08-02 07:41:46.961 (   0.018s) [        DE270071]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 28
+2024-08-02 07:41:46.961 (   0.018s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{EEE84601-5D79-4CF3-AC5A-5F2A66CDE497}' (status: 2, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{BAF9F8BD-DAB6-49A9-8495-CB71F0F0A9EF}' (status: 1, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 22
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{42836086-1D70-4881-9A15-196EF16E160D}' (status: 2, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{6EA90E31-C129-4CCF-875F-44E04599FBD2}' (status: 2, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{2D6C05AA-BFEE-4925-A396-04B018DC0965}' (status: 2, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{C54C331E-2DA7-41C3-A754-F372CEF6AFD2}' (status: 1, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 23
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{A0A4CD27-CC65-453B-9A4C-B839C060218B}' (status: 2, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:36    INFO| netif '{51F10111-F067-11EA-9B1A-806E6F6E6963}' (status: 1, multicast: 1
+2024-08-02 07:41:46.963 (   0.020s) [        DE270071]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-08-02 07:41:46.964 (   0.020s) [        DE270071]         api_config.cpp:270   INFO| Loaded default config
+2024-08-02 07:41:46.964 (   0.021s) [        DE270071]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-08-02 07:41:46.968 (   0.025s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fe80::b8ac:e7b4:6699:d160%28 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.025s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 169.254.41.117 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.025s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fd6d:c83b:5cef:b6b2::1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.025s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 192.168.192.177 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fc8a:3904:1126:bbfe:4ec5::1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 127.0.0.1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fe80::b8ac:e7b4:6699:d160%28 (An invalid argument was supplied.)
+2024-08-02 07:41:46.969 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 169.254.41.117 (An invalid argument was supplied.)
+2024-08-02 07:41:46.970 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fd6d:c83b:5cef:b6b2::1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.970 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 192.168.192.177 (An invalid argument was supplied.)
+2024-08-02 07:41:46.970 (   0.026s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface fc8a:3904:1126:bbfe:4ec5::1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.970 (   0.027s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface 127.0.0.1 (An invalid argument was supplied.)
+2024-08-02 07:41:46.970 (   0.027s) [        DE270071]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (An invalid argument was supplied.)
+Starting Stream1 (Random)...
+Traceback (most recent call last):
+  File "D:\PHD\Biosignals-laboratory\scripts/stream2_script.py", line 15, in <module>
