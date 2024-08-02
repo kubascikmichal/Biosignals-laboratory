@@ -1,2 +1,42 @@
 Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
 Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Traceback (most recent call last):
+  File "d:\PHD\Biosignals-laboratory\scripts/myo_stream.py", line 38, in <module>
+    len = load_data(thumb_results, "../data/myo_stream/raw_emg_data_unprocessed/thumb_motion_raw.csv")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\PHD\Biosignals-laboratory\scripts/myo_stream.py", line 31, in load_data
+    with open(path, newline='') as csvfile:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data/myo_stream/raw_emg_data_unprocessed/thumb_motion_raw.csv'
+Traceback (most recent call last):
+  File "d:\PHD\Biosignals-laboratory\scripts/myo_stream.py", line 38, in <module>
+    len = load_data(thumb_results, "../data/myo_stream/raw_emg_data_unprocessed/thumb_motion_raw.csv")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\PHD\Biosignals-laboratory\scripts/myo_stream.py", line 31, in load_data
+    with open(path, newline='') as csvfile:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../data/myo_stream/raw_emg_data_unprocessed/thumb_motion_raw.csv'
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
+Usage: python D:\PHD\Biosignals-laboratory\scripts/myo_stream.py <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>
