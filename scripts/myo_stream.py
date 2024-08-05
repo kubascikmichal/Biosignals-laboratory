@@ -76,3 +76,18 @@ print("Loaded rest movement data with len %d -> %0.2f seconds" % (len(rest_resul
 
 victory_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\victory_finger_motion_raw.csv", duration)
 print("Loaded victory movement data with len %d -> %0.2f seconds" % (len(victory_results), len(victory_results) / Fs))
+
+# Stream data in an infinite loop
+async def main():
+    await asyncio.gather(
+        asyncio.to_thread(stream_data, index_results, Fs, outlet),
+        asyncio.to_thread(stream_data, thumb_results, Fs, outlet),
+        asyncio.to_thread(stream_data, middle_results, Fs, outlet),
+        asyncio.to_thread(stream_data, ring_results, Fs, outlet),
+        asyncio.to_thread(stream_data, little_results, Fs, outlet),
+        asyncio.to_thread(stream_data, rest_results, Fs, outlet),
+        asyncio.to_thread(stream_data, victory_results, Fs, outlet)
+    )
+
+if __name__ == "__main__":
+    asyncio.run(main())
