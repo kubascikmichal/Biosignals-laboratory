@@ -6,6 +6,7 @@ from time import sleep
 
 Fs = 200
 period_ms = 1/Fs
+duration = 2 * 60 * Fs  # 2 minutes of data
 
 # Get parameters from command line arguments
 if len(sys.argv) < 6:
@@ -35,6 +36,8 @@ def load_data(results: list, path: str) -> int:
     with open(path, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
         for row in reader:
+            if i >= duration:
+                break  # Stop reading after loading the required duration
             results.append(row)
     return len(results)
 
@@ -47,35 +50,29 @@ def stream_data(data: list, fs:int, stream: StreamOutlet):
     :param stream: Lab Streaming Layer outlet
     :type stream: StreamOutlet
     """
+    while True:
     for i in range(len(data)):
         stream.push_sample(data[i])
         sleep(1/fs)
 
-index_results=[]
-ret = load_data(index_results, "data\\myo_stream\\raw_emg_data_unprocessed\\index_finger_motion_raw.csv")
-print("Loaded index movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+# Load the first two minutes of data from each CSV file
+index_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\index_finger_motion_raw.csv", duration)
+print("Loaded index movement data with len %d -> %0.2f seconds" % (len(index_results), len(index_results) / Fs))
 
-thumb_results=[]
-ret = load_data(thumb_results, "data\\myo_stream\\raw_emg_data_unprocessed\\thumb_motion_raw.csv")
-print("Loaded thumb movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+thumb_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\thumb_motion_raw.csv", duration)
+print("Loaded thumb movement data with len %d -> %0.2f seconds" % (len(thumb_results), len(thumb_results) / Fs))
 
-middle_results=[]
-ret = load_data(middle_results, "data\\myo_stream\\raw_emg_data_unprocessed\\middle_finger_motion_raw.csv")
-print("Loaded middle movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+middle_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\middle_finger_motion_raw.csv", duration)
+print("Loaded middle movement data with len %d -> %0.2f seconds" % (len(middle_results), len(middle_results) / Fs))
 
-ring_results=[]
-ret = load_data(ring_results, "data\\myo_stream\\raw_emg_data_unprocessed\\ring_finger_motion_raw.csv")
-print("Loaded rest movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+ring_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\ring_finger_motion_raw.csv", duration)
+print("Loaded ring movement data with len %d -> %0.2f seconds" % (len(ring_results), len(ring_results) / Fs))
 
-little_results=[]
-ret = load_data(little_results, "data\\myo_stream\\raw_emg_data_unprocessed\\middle_finger_motion_raw.csv")
-print("Loaded little movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+little_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\little_finger_motion_raw.csv", duration)
+print("Loaded little movement data with len %d -> %0.2f seconds" % (len(little_results), len(little_results) / Fs))
 
-rest_results=[]
-ret = load_data(rest_results, "data\\myo_stream\\raw_emg_data_unprocessed\\rest_finger_motion_raw.csv")
-print("Loaded rest movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
+rest_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\rest_finger_motion_raw.csv", duration)
+print("Loaded rest movement data with len %d -> %0.2f seconds" % (len(rest_results), len(rest_results) / Fs))
 
-victory_results=[]
-ret = load_data(rest_results, "data\\myo_stream\\raw_emg_data_unprocessed\\rest_finger_motion_raw.csv")
-print("Loaded rest movement data with len %d -> %0.2f seconds" % (ret, ret / Fs))
-
+victory_results = load_data("data\\myo_stream\\raw_emg_data_unprocessed\\victory_finger_motion_raw.csv", duration)
+print("Loaded victory movement data with len %d -> %0.2f seconds" % (len(victory_results), len(victory_results) / Fs))
