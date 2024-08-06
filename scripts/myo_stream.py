@@ -1,40 +1,47 @@
 import asyncio
 import sys
 import os
-from pylsl import StreamInfo, StreamOutlet
+import json
 import csv
+from pylsl import StreamInfo, StreamOutlet
 from time import sleep
 
 # Base directory of the project
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Data folder
-DATA_DIR = os.path.join(BASE_DIR, 'data')
+DATA_DIR = os.path.join(BASE_DIR, '..', 'data')
+
+CONFIG_FILE = os.path.join(BASE_DIR, '..', 'configs', 'emg_data_stream.json')
 
 # Sampling frequency
 Fs = 200
 period_ms = 1 / Fs
 duration = 2 * 60 * Fs  # 2 minutes of data
 
-# Get parameters from command line arguments
-if len(sys.argv) < 6:
-    print("Usage: python %s <stream_name> <stream_type> <sampling_frequency> <data_type> <unique_id> <channels>" % (sys.argv[0]))
-    sys.exit(1)
-
-stream_name = sys.argv[1]
-stream_type = sys.argv[2]
-sampling_frequency = int(sys.argv[3])
-data_type = sys.argv[4]
-unique_id = sys.argv[5]
-channels = sys.argv[6].split(',')
-
-# LSL configuration - use the parameters from command line arguments
-info = StreamInfo(stream_name, stream_type, len(channels), sampling_frequency, data_type, unique_id)
-outlet = StreamOutlet(info)
+def load_config(path: str) -> dict:
+    """
+    Load the configuration from a JSON file.
+    
+    :param path: Path to the JSON file
+    :type path: str
+    :returns: Dictionary containing configuration data
+    :rtype: dict
+    """
+    try:
+        with open(path, 'r') as file:
+            config = json.load(file)
+        return config
+    except FileNotFoundError:
+        print(f"Config file not found: {path}")
+        sys.exit(1)
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from the config file: {path}")
+        sys.exit(1)
 
 def load_data(path: str) -> list:
     """
     Load data from a CSV file.
+    
     :param path: Path to the CSV file
     :type path: str
     :returns: List of data samples
@@ -70,6 +77,22 @@ def stream_data(data: list, fs: int, stream: StreamOutlet):
             stream.push_sample(sample)
             sleep(1 / fs)
 
+# Load configuration
+config = load_config(CONFIG_FILE)
+stream_config = config['streams'][0]
+
+# Extract stream parameters from config
+stream_name = stream_config['name']
+stream_type = stream_config['type']
+sampling_frequency = stream_config['sampling_frequency']
+data_type = stream_config['data_type']
+unique_id = stream_config['unique_id']
+channels = stream_config['channels']
+
+# LSL configuration - use the parameters from the config
+info = StreamInfo(stream_name, stream_type, len(channels), sampling_frequency, data_type, unique_id)
+outlet = StreamOutlet(info)
+
 # Data file paths
 data_files = [
     os.path.join(DATA_DIR, "myo_stream/raw_emg_data_unprocessed/index_finger_motion_raw.csv"),
@@ -90,8 +113,7 @@ for file in data_files:
 
 # Stream data in an infinite loop
 async def main():
-    await asyncio.to_thread(stream_data, all_data, Fs, outlet)
+    await asyncio.to_thread(stream_data, all_data, sampling_frequency, outlet)
 
 if __name__ == "__main__":
     asyncio.run(main())
-
