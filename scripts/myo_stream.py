@@ -61,21 +61,22 @@ def load_data(path: str) -> list:
         print(f"Error reading file {path}: {e}")
     return results
 
-def stream_data(data: list, fs: int, stream: StreamOutlet):
+def stream_data(all_data: list, fs: int, stream: StreamOutlet):
     """
-    Stream data in an infinite loop.
+    Stream data in a cyclic manner, streaming 2 minutes from each CSV file in sequence.
     
-    :param data: Data to stream
-    :type data: list
+    :param all_data: List of lists containing data from all CSV files
+    :type all_data: list
     :param fs: Sampling frequency
     :type fs: int
     :param stream: Lab Streaming Layer outlet
     :type stream: StreamOutlet
     """
     while True:
-        for sample in data:
-            stream.push_sample(sample)
-            sleep(1 / fs)
+        for data in all_data:
+            for sample in data:
+                stream.push_sample(sample)
+                sleep(1 / fs)
 
 # Load configuration
 config = load_config(CONFIG_FILE)
@@ -105,11 +106,7 @@ data_files = [
 ]
 
 # Load all data
-all_data = []
-for file in data_files:
-    data = load_data(file)
-    print(f"Loaded data from {file} with length {len(data)} -> {len(data) / Fs:.2f} seconds")
-    all_data.extend(data)
+all_data = [load_data(file) for file in data_files]
 
 # Stream data in an infinite loop
 async def main():
