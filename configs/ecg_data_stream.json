@@ -1,0 +1,13 @@
+{
+  "streams": [
+    {
+      "name": "ECG_BLE_Stream",
+      "type": "ECG",
+      "sampling_frequency": 200,
+      "channels": ["ECG_Lead1"],
+      "data_type": "float32",
+      "unique_id": "ECG_XIAO",
+      "script_path": "scripts/ecg_ble_stream.py"
+    }
+  ]
+}

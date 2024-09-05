@@ -95,3 +95,75 @@ Traceback (most recent call last):
 Starting Stream1 (Random)...
 Traceback (most recent call last):
   File "D:\PHD\Biosignals-laboratory\scripts/stream2_script.py", line 15, in <module>
+2024-09-05 10:41:28.408 (   0.006s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:41:28.408 (   0.007s) [        AD3AE96C]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:41:28.410 (   0.009s) [        AD3AE96C]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:41:28.411 (   0.009s) [        AD3AE96C]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:52:00.426 (   0.005s) [        E7F49A5D]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:52:00.426 (   0.006s) [        E7F49A5D]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:52:00.428 (   0.008s) [        E7F49A5D]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:52:00.429 (   0.008s) [        E7F49A5D]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:52:35.526 (   0.004s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:52:35.526 (   0.005s) [        D7B3D69B]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:52:35.527 (   0.005s) [        D7B3D69B]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:52:35.528 (   0.007s) [        D7B3D69B]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:52:35.529 (   0.007s) [        D7B3D69B]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:53:24.906 (   0.005s) [        DD1E18B0]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:53:24.908 (   0.007s) [        DD1E18B0]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:53:24.908 (   0.007s) [        DD1E18B0]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:53:44.885 (   0.005s) [        1CE6075F]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:53:44.887 (   0.007s) [        1CE6075F]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:53:44.887 (   0.007s) [        1CE6075F]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{B5D5112C-A95D-48CC-A87D-10C1FF562AE5}' (status: 2, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{A7D1B9AE-9966-43BF-A421-6FCEC7D8BAAE}' (status: 2, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{9B94D774-6644-40EA-B99B-5C0247FBC412}' (status: 1, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 15
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{883D2C59-CC2D-4CBC-9E04-1027467A9BFB}' (status: 2, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{5CBCAA65-D66A-11EB-9174-806E6F6E6963}' (status: 1, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:58    INFO| 	IPv6 ifindex 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]      netinterfaces.cpp:36    INFO| netif '{FF408855-6C05-4EE7-A5A1-5D822F43189A}' (status: 2, multicast: 1
+2024-09-05 10:54:16.260 (   0.006s) [        C7315C83]         api_config.cpp:270   INFO| Loaded default config
+2024-09-05 10:54:16.260 (   0.007s) [        C7315C83]             common.cpp:65    INFO| git:6ca188c266c21f7228dc67077303fa6abaf2e8be/branch:refs/tags/v1.16.2/build:Release/compiler:MSVC-19.0.24245.0/link:SHARED
+2024-09-05 10:54:16.262 (   0.008s) [        C7315C83]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff02:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
+2024-09-05 10:54:16.262 (   0.009s) [        C7315C83]         udp_server.cpp:82    WARN| Could not bind multicast responder for ff05:113d:6fdd:2c17:a643:ffe2:1bd1:3cd2 to interface ::1 (Se ha proporcionado un argumento no válido.)
